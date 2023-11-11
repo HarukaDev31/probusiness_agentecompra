@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.png?ver=5.0.0"); ?>" type="image/png">
 	  <link rel="icon" href="<?php echo base_url("assets/images/favicon/favicon.png?ver=5.0.0"); ?>" type="image/png">
     
-    <title>ProBusiness | Importación Grupal</title>
+    <title>ProBusiness | Agente de Compra</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
