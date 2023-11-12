@@ -35,20 +35,26 @@ class Inicio extends CI_Controller {
 	}
 
 	public function enviarPedido(){
-		$arrPost = $this->input->post();
-		$arrFiles = $_FILES;
-		echo json_encode($this->InicioModel->enviarPedido($arrPost, $arrFiles));
 
-		/*
+		//$arrPost = $this->input->post();
+		//$arrFiles = $this->input->post();
+		//echo json_encode($this->InicioModel->enviarPedido($data, $where));
+
+$addProducto = $this->input->post('addProducto');
+//array_debug($addProducto);
+
+		//array_debug($_FILES);
+		//array_debug($this->input->post());
+
+		$_FILES['voucher']['name'] = $addProducto[1]['img_name'];
+		$_FILES['voucher']['type'] = $addProducto[1]['img_type'];
+		$_FILES['voucher']['tmp_name'] = $_FILES['voucher2']['tmp_name'];
+		$_FILES['voucher']['error'] = $addProducto[1]['error_img'];
+		$_FILES['voucher']['size'] = $addProducto[1]['size_img'];
+		
+
 		$path = "assets/images/voucher_deposito/";
 		
-		//SET en array igual se subira uno por uno para los productos
-		$_FILES['voucher']['name'] = $_FILES['voucher']['name'][0];
-		$_FILES['voucher']['type'] = $_FILES['voucher']['type'][0];
-		$_FILES['voucher']['tmp_name'] = $_FILES['voucher']['tmp_name'][0];
-		$_FILES['voucher']['error'] = $_FILES['voucher']['error'][0];
-		$_FILES['voucher']['size'] = $_FILES['voucher']['size'][0];
-
 		array_debug($_FILES);
 
 		$config['upload_path'] = $path;
@@ -68,8 +74,6 @@ class Inicio extends CI_Controller {
 		} else {
 			echo "bien";
 		}
-		*/
-		
 		/*
 		$valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'bmp' , 'heif', 'webp');
 		if(!empty($this->input->post('id_pedido')) && isset($_FILES['voucher'])){

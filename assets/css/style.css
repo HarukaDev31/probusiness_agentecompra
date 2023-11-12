@@ -15,34 +15,46 @@
 }
 
 .cart-size-img {
-    height: 360px;
+    height: 300px;
+}
+
+.div-caracteristica {
+    height: 100px;
+    display: block;
+}
+
+.p-caracteristica {
+    padding:0;
+    overflow: scroll; overflow-x:hidden;
+    height:100%
+    /*-webkit-overflow-scrolling: touch;*/
 }
 
 /* sm */
 @media (min-width: 576px) {
     .cart-size-img {
-        height: 460px;
+        height: 300px;
     }
 }
 
 /* md */
 @media (min-width: 768px) {
     .cart-size-img {
-        height: 460px;
+        height: 300px;
     }
 }
 
 /* lg */
 @media (min-width: 992px) {
     .cart-size-img {
-        height: 460px;
+        height: 300px;
     }
 }
 
 /* xl */
 @media (min-width: 1200px) {
     .cart-size-img {
-        height: 460px;
+        height: 300px;
     }
 }
 
@@ -73,13 +85,13 @@
 }
 
 .nav-scroller {
-position: relative;
-z-index: 2;
+    position: relative;
+    z-index: 2;
     height: 2.75rem;
     overflow-y: hidden;
-    }
+}
 
-    .nav-scroller .nav {
+.nav-scroller .nav {
     display: flex;
     flex-wrap: nowrap;
     padding-bottom: 1rem;
@@ -255,15 +267,15 @@ z-index: 2;
 }
 
 /* file voucher */
-.custom-file-voucher #voucher {
+.custom-file-voucher input[type=file] {
     margin-left: -2px !important;
 }
 
-.custom-file-voucher#voucher::-webkit-file-upload-button {
+.custom-file-voucher input[type=file]::-webkit-file-upload-button {
     display: none;
 }
 
-.custom-file-voucher #voucher::file-selector-button {
+.custom-file-voucher input[type=file]::file-selector-button {
     display: none;
 }
 
@@ -272,11 +284,11 @@ z-index: 2;
     cursor: pointer;
 }
 
-#voucher::-webkit-file-upload-button {
+input[type=file]::-webkit-file-upload-button {
     visibility: hidden;
 }
 
-#voucher::before {
+input[type=file]::before {
     content: '';
 }
 
@@ -284,7 +296,7 @@ z-index: 2;
 .flotante-wp{
     position: fixed;
     z-index: 100;
-    bottom: 20px;
+    bottom: 100px;
     right: 5px;
     border-radius: 50%;
     overflow: hidden;
@@ -293,9 +305,41 @@ z-index: 2;
 }
 
 .size-wp {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin: -8px;
     display: block;
     object-fit: cover;
+}
+
+/* sm */
+@media (min-width: 576px) {
+    .size-wp {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .size-wp {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+/* lg */
+@media (min-width: 992px) {
+    .size-wp {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+    .size-wp {
+        height: 80px;
+        width: 80px;
+    }
 }
