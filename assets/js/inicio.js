@@ -112,7 +112,7 @@ function addItems(){
           //div_items += '<div class="input-group custom-file-voucher pt-2">';
             //div_items += '<input class="form-control voucher " id="voucher' + iCounter + '" type="file" name="voucher[]" data-id="' + iCounter + '" onchange="loadFile(event, ' + iCounter + ')" placeholder="sin archivo" accept="image/*">';
             div_items += '<label class="btn btn btn-outline-secondary" for="voucher' + iCounter + '" style="width: 100%;">';
-              div_items += '<input class="form-control voucher " id="voucher' + iCounter + '" type="file" multiple="false" style="display:none" name="voucher[]" data-id="' + iCounter + '" onchange="loadFile(event, ' + iCounter + ')" placeholder="sin archivo" accept="image/*">Agregar foto';
+              div_items += '<input class="form-control voucher " id="voucher' + iCounter + '" type="file" style="display:none" name="voucher[]" data-id="' + iCounter + '" onchange="loadFile(event, ' + iCounter + ')" placeholder="sin archivo" accept="image/*">Agregar foto';
             div_items += '</label>';
           //div_items += '</div>';
         div_items += '</div>';
