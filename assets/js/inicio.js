@@ -65,8 +65,8 @@ $(document).ready(function () {
   $("#form-arrItems").on('submit',function(e){
     e.preventDefault();
 
-    //$('#btn-file_voucher').prop('disabled', true);
-    //$('#btn-file_voucher').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando');
+    $('#btn-enviar_pedido').prop('disabled', true);
+    $('#btn-enviar_pedido').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando');
 
     var postData = new FormData($("#form-arrItems")[0]);
     console.log(postData);
@@ -79,8 +79,8 @@ $(document).ready(function () {
       contentType: false
     })
     .done(function(response) {
-      //$('#btn-file_voucher').prop('disabled', false);
-      //$('#btn-file_voucher').html('Enviar');
+      $('#btn-enviar_pedido').prop('disabled', false);
+      $('#btn-enviar_pedido').html('Enviar pedido');
 
       console.log(response);
       if(response.status=='success'){
