@@ -197,6 +197,7 @@ function loadFile(event, id){
     URL.revokeObjectURL(output.src) // free memory
   }
 
+  scrollToError($("html, body"), $('#payment-nombre_comercial'));
   $('#modal-nombre_comercial' + id).focus();
   $('#modal-nombre_comercial' + id).select();
 }
