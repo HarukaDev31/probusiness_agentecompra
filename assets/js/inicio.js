@@ -57,6 +57,9 @@ $(document).ready(function () {
   $(document).on('click', '#btn-add_item', function (e) {
     e.preventDefault();
     addItems();
+
+    $('#div-button-add_item').removeClass('mt-2');
+    $('#div-button-add_item').addClass('mt-4');
   })
 
   $("#form-arrItems").on('submit',function(e){
@@ -87,23 +90,31 @@ $(document).ready(function () {
       }
     });
   });
+
+  $(document).on('click', '.btn-quitar_item', function (e) {
+    e.preventDefault();
+    //alert($(this).data('id'));
+    $('#card' + $(this).data('id')).remove();
+	})
 });
 
 function addItems(){
   div_items = '';
 
   //visible para mostrar a publico
-  div_items += '<div class="card border-0 rounded shadow mt-3">';
-    div_items += '<div class="row g-0">';
-      div_items += '<div class="col-sm-4 position-relative text-center">';
+  div_items += '<div id="card' + iCounter + '" class="card border-0 rounded shadow mt-3">';
+    div_items += '<div class="row">';
+      div_items += '<div class="col-sm-4 position-relative text-center ps-4 pe-3 pe-sm-0">';
         div_items += '<div class="col-sm-12">';
-          div_items += '<h6 class="card-title mb-0 pt-3">';
+          div_items += '<h6 class="text-left card-title mb-2 pt-3" style="text-align: left;">';
             div_items += '<span class="fw-bold">Imagen</span>';
           div_items += '</h6>';
-          div_items += '<div class="input-group custom-file-voucher pt-2">';
-            div_items += '<label class="input-group-text" for="voucher"></label>';
-            div_items += '<input class="form-control voucher " id="voucher' + iCounter + '" type="file" name="voucher[]" data-id="' + iCounter + '" onchange="loadFile(event, ' + iCounter + ')" placeholder="sin archivo" accept="image/*">';
-          div_items += '</div>';
+          //div_items += '<div class="input-group custom-file-voucher pt-2">';
+            //div_items += '<input class="form-control voucher " id="voucher' + iCounter + '" type="file" name="voucher[]" data-id="' + iCounter + '" onchange="loadFile(event, ' + iCounter + ')" placeholder="sin archivo" accept="image/*">';
+            div_items += '<label class="btn btn btn-outline-secondary" for="voucher' + iCounter + '" style="width: 100%;">';
+              div_items += '<input class="form-control voucher " id="voucher' + iCounter + '" type="file" multiple="false" style="display:none" name="voucher[]" data-id="' + iCounter + '" onchange="loadFile(event, ' + iCounter + ')" placeholder="sin archivo" accept="image/*">Agregar foto';
+            div_items += '</label>';
+          //div_items += '</div>';
         div_items += '</div>';
         div_items += '<img id="img_producto-preview' + iCounter + '" src="" class=" img-thumbnail border-0 rounded" alt="">'; //cart-size-img
       div_items += '</div>';
@@ -115,35 +126,39 @@ function addItems(){
               div_items += '<h6 class="card-title">';
                 div_items += '<span class="fw-bold">Nombre Comercial</span>';
               div_items += '</h6>';
-              div_items += '<input type="text" inputmode="text" id="modal-nombre_comercial" name="addProducto[' + iCounter + '][nombre_comercial]" class="form-control required" placeholder="" maxlength="255" autocomplete="name">';
+              div_items += '<input type="text" inputmode="text" id="modal-nombre_comercial' + iCounter + '" name="addProducto[' + iCounter + '][nombre_comercial]" class="form-control required" placeholder="" maxlength="255" autocomplete="name">';
             div_items += '</div>';
             
             div_items += '<div class="col-sm-12 mb-3">';
               div_items += '<h6 class="card-title">';
                 div_items += '<span class="fw-bold">Características</span>';
               div_items += '</h6>';
-              div_items += '<textarea class="form-control required" placeholder="" id="modal-caracteristicas" name="addProducto[' + iCounter + '][caracteristicas]" style="height: 100px"></textarea>';
+              div_items += '<textarea class="form-control required" placeholder="" id="modal-caracteristicas' + iCounter + '" name="addProducto[' + iCounter + '][caracteristicas]" style="height: 100px"></textarea>';
             div_items += '</div>';
             
             div_items += '<div class="col-12 col-sm-3 col-md-3 col-lg-2 mb-3">';
               div_items += '<h6 class="card-title">';
                 div_items += '<span class="fw-bold">Cantidad</span>';
               div_items += '</h6>';
-              div_items += '<input type="text" id="modal-cantidad" inputmode="decimal" name="addProducto[' + iCounter + '][cantidad]" class="form-control input-decimal required" placeholder="" value="" autocomplete="off">';
+              div_items += '<input type="text" id="modal-cantidad' + iCounter + '" inputmode="decimal" name="addProducto[' + iCounter + '][cantidad]" class="form-control input-decimal required" placeholder="" value="" autocomplete="off">';
             div_items += '</div>';
             
-            div_items += '<div class="col-12 col-sm-9 col-md-9 col-lg-10 mb-3">';
+            div_items += '<div class="col-12 col-sm-9 col-md-9 col-lg-10 mb-1">';
               div_items += '<h6 class="card-title">';
                 div_items += '<span class="fw-bold">Link</span>';
               div_items += '</h6>';
-              div_items += '<input type="text" inputmode="url" id="modal-link" name="addProducto[' + iCounter + '][link]" class="form-control required" placeholder="" autocomplete="off">';
+              div_items += '<input type="text" inputmode="url" id="modal-link' + iCounter + '" name="addProducto[' + iCounter + '][link]" class="form-control required" placeholder="" autocomplete="off">';
             div_items += '</div>';
           div_items += '</div>';
         div_items += '</div>';
       div_items += '</div>';
 
+      div_items += '<div class="col-sm-12 ps-4 mb-3 pe-4">';
+        div_items += '<div class="d-grid gap">';
+          div_items += '<button type="button" id="btn-quitar_item_'+iCounter+'" class="btn btn-outline-danger btn-quitar_item col" data-id="'+iCounter+'">Quitar</button>';
+        div_items += '</div>';
+      div_items += '</div>';
     div_items += '</div>';
-        
   div_items += '</div>';
 
   $( '#div-arrItems' ).append(div_items);
@@ -181,6 +196,9 @@ function loadFile(event, id){
   output.onload = function() {
     URL.revokeObjectURL(output.src) // free memory
   }
+
+  $('#modal-nombre_comercial' + id).focus();
+  $('#modal-nombre_comercial' + id).select();
 }
 
 function validateNumberLetter(){

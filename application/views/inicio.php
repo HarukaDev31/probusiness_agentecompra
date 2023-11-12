@@ -80,18 +80,21 @@
         </div>
       </div><!--col left-->
     </div><!--row-->
-
-    <div class="row">
-      <div class="col-12 col-sm-12 col-md-12 mt-5">
-        <div class="d-grid gap">
-          <!--<button type="button" id="btn-add_item" class="btn btn-outline-primary col" data-bs-toggle="modal" data-bs-target="#modal-items">Agregar artículo</button>-->
-          <button type="button" id="btn-add_item" class="btn btn-outline-primary col">Agregar artículo</button>
-        </div>
-      </div>
-    </div>
   
     <!-- array_items -->
-    <div id="div-arrItems">
+    <div>
+      <h2 class="text-center mt-3 fw-bold">Artículos</h2>
+      <div id="div-arrItems">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 mt-2" id="div-button-add_item">
+        <div class="d-grid gap">
+          <!--<button type="button" id="btn-add_item" class="btn btn-outline-primary col" data-bs-toggle="modal" data-bs-target="#modal-items">Agregar artículo</button>-->
+          <button type="button" id="btn-add_item" class="btn btn-secondary col">Agregar artículo</button>
+        </div>
+      </div>
     </div>
 
     <div id="div-footer-cart" class="fixed-bottom mt-auto py-3 bg-white footer-cart-shadow" data-bs-toggle="modal" data-bs-target="#modal_cart_shop">
