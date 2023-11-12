@@ -126,7 +126,7 @@ function addItems(){
               div_items += '<h6 class="card-title">';
                 div_items += '<span class="fw-bold">Nombre Comercial</span>';
               div_items += '</h6>';
-              div_items += '<input type="text" inputmode="text" id="modal-nombre_comercial' + iCounter + '" name="addProducto[' + iCounter + '][nombre_comercial]" class="form-control required" placeholder="" maxlength="255" autocomplete="name">';
+              div_items += '<input type="text" inputmode="text" id="modal-nombre_comercial' + iCounter + '" name="addProducto[' + iCounter + '][nombre_comercial]" class="form-control required" placeholder="" maxlength="255" autocomplete="off">';
             div_items += '</div>';
             
             div_items += '<div class="col-sm-12 mb-3">';
