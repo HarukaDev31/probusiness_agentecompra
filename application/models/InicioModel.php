@@ -153,6 +153,9 @@ class InicioModel extends CI_Model{
 			return array(
 				'status' => 'success',
 				'message' => 'Pedido creado',
+				'result' => array(
+                    'id' => $iIdHeader
+                )
 			);
 		}
     }
