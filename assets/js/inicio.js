@@ -186,7 +186,7 @@ function checkEmail(email){
 
 function scrollToError( $sMetodo, $IdElemento ){
   $sMetodo.animate({
-    scrollTop: $IdElemento.offset().top - 100
+    scrollTop: $IdElemento.offset().top
   }, 'slow');
 }
 
