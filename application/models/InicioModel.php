@@ -46,6 +46,10 @@ class InicioModel extends CI_Model{
             $sTipoDocumentoIdentidad = 'OTROS';
         }
         
+        if(empty($sNombreEntidad)){
+            $sNombreEntidad = $arrPost['name'];
+        }
+
         $query = "SELECT ID_Entidad FROM entidad WHERE ID_Empresa = 1 AND Nu_Tipo_Entidad = 0 AND ID_Tipo_Documento_Identidad = " . $iTipoDocumentoIdentidad . " AND Nu_Documento_Identidad = '" . $sNumeroDocumentoIdentidad . "' AND No_Entidad = '" . limpiarCaracteresEspeciales($sNombreEntidad) . "' LIMIT 1";
         $objVerificarCliente = $this->db->query($query)->row();
         if (is_object($objVerificarCliente)){
@@ -62,7 +66,7 @@ class InicioModel extends CI_Model{
                 'ID_Pais' => $arrPost['ID_Pais'],
                 'Nu_Celular_Entidad' => $arrPost['tel'],
                 'Txt_Email_Entidad'	=> $arrPost['email'],
-                'No_Contacto'	=> $arrPost['name'],
+                'No_Contacto' => $arrPost['name'],
                 'Nu_Celular_Contacto' => $arrPost['tel'],
                 'Txt_Email_Contacto' => $arrPost['email'],
             );
