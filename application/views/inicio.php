@@ -49,8 +49,8 @@
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
                   <label class="fw-bold">País <span class="label-advertencia text-danger"> *</span></label>
                   <div class="form-group">
-                    <select  id="cbo-pais" name="ID_Pais" class="form-select">
-                      <option value="0" selected="selected">- Seleccionar -</option>
+                    <select  id="cbo-pais" name="ID_Pais" class="form-control form-select-lg" style="width:100%;"><!-- form-select -->
+                      <option value="0" selected="selected">- Elegir -</option>
                       <?php foreach ($arrPaises['result'] as $row) { ?>
                         <option value="<?php echo $row->ID_Pais; ?>"><?php echo $row->No_Pais; ?></option>
                       <?php } ?>
@@ -58,19 +58,19 @@
                     <span class="help-block text-danger" id="error"></span>
                   </div>
                 </div>
-
+                
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
-                  <label class="fw-bold">Empresa <span class="label-advertencia text-danger"> *</span></label>
+                  <label class="fw-bold">RUC</label> (opcional)
                   <div class="form-group">
-                    <input type="text" inputmode="text" id="payment-nombre_empresa" name="No_Entidad" class="form-control required" placeholder="Ingresar" maxlength="100" autocomplete="on">
+                    <input type="text" inputmode="text" id="payment-numero_documento_identidad_empresa" name="Nu_Documento_Identidad" class="form-control input-number_letter" placeholder="Opcional" maxlength="16" autocomplete="on">
                     <span class="help-block text-danger" id="error"></span>
                   </div>
                 </div>
-                
+
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
-                  <label class="fw-bold">RUC <span class="label-advertencia text-danger"> *</span></label>
+                  <label class="fw-bold">Empresa</label> (opcional)
                   <div class="form-group">
-                    <input type="text" inputmode="numeric" id="payment-numero_documento_identidad_empresa" name="Nu_Documento_Identidad" class="form-control required input-number_letter" placeholder="Ingresar" maxlength="16" autocomplete="on">
+                    <input type="text" inputmode="text" id="payment-nombre_empresa" name="No_Entidad" class="form-control" placeholder="Opcional" maxlength="100" autocomplete="on">
                     <span class="help-block text-danger" id="error"></span>
                   </div>
                 </div>
@@ -91,7 +91,7 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 mt-2" id="div-button-add_item">
         <div class="d-grid gap">
-          <button type="button" id="btn-add_item" class="btn btn-secondary col">Agregar artículo</button>
+          <button type="button" id="btn-add_item" class="btn btn-danger btn-lg col">Agregar artículo</button>
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@
         <div class="row">
           <div class="col-12 col-sm-12">
             <div class="d-grid">
-              <button type="submit" id="btn-enviar_pedido" class="btn btn-primary btn-lg col">Enviar pedido</button>
+              <button type="submit" id="btn-enviar_pedido" class="btn btn-primary col">Enviar pedido</button>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@
   $codigo_pais="51";
   $numero_celular="913656663";
   $phone = $codigo_pais . $numero_celular;
-  $message_wp = "Hola 😀 *ProBusiness* deseo más información del *Agente de Compras* 🔎";
+  $message_wp = "Hola 😀 *ProBusiness* estuve en la web deseo más información del *Agente de Compras* 🔎";
   $sURLSendMessageWhatsapp = "https://api.whatsapp.com/send?phone=" . $phone . "&text=" . $message_wp;
   ?>
   <a class="flotante-wp" href="<?php echo $sURLSendMessageWhatsapp; ?>" target="_blank" rel="noopener noreferrer"><img class="size-wp" src="<?php echo base_url("assets/images/whatsapp.png?ver=2.0"); ?>" alt="ProBusiness WhastApp"></a>

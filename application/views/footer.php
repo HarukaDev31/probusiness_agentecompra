@@ -6,6 +6,7 @@
 
     <!--interno-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="<?php echo base_url("assets/js/inicio.js?ver=48.0.0"); ?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="<?php echo base_url("assets/js/inicio.js?ver=51.0.0"); ?>"></script>
   </body>
 </html>

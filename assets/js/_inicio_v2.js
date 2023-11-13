@@ -93,6 +93,16 @@ $(document).ready(function () {
       $('#cbo-pais').closest('.form-group').removeClass('has-success').addClass('has-error');
 
       scrollToError($("html, body"), $('#cbo-pais'));
+    } else if ($("#payment-nombre_empresa").val().trim().length < 3) {
+      $('#payment-nombre_empresa').closest('.form-group').find('.help-block').html('Ingresar Empresa');
+      $('#payment-nombre_empresa').closest('.form-group').removeClass('has-success').addClass('has-error');
+
+      scrollToError($("html, body"), $('#payment-nombre_empresa'));
+    } else if ($("#payment-numero_documento_identidad_empresa").val().trim().length < 7) {
+      $('#payment-numero_documento_identidad_empresa').closest('.form-group').find('.help-block').html('Ingresar RUC');
+      $('#payment-numero_documento_identidad_empresa').closest('.form-group').removeClass('has-success').addClass('has-error');
+
+      scrollToError($("html, body"), $('#payment-numero_documento_identidad_empresa'));
     } else {
       //validacion de articulos
       var sEstadoArticulos = true;
