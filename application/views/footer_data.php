@@ -25,8 +25,8 @@
       <div class="col-12 col-md">
         <h5 class="fw-bold mb-4">Contacto</h5>
         <ul class="list-unstyled text-small">
-          <li class="mb-3"><a class="link-secondary text-decoration-none" href="tel:+51932531441" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i> (+51) 932 531 441</a></li>
-          <li class="mb-3"><a class="link-secondary text-decoration-none" href="mailto:cursodeimpo@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i> cursodeimpo@gmail.com</a></li>
+          <li class="mb-3"><a class="link-secondary text-decoration-none" href="tel:+51913656663" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i> (+51) 913 656 663</a></li>
+          <li class="mb-3"><a class="link-secondary text-decoration-none" href="mailto:info@probusiness.pe" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i> info@probusiness.pe</a></li>
           <li class="mb-3"><a class="link-secondary text-decoration-none" href="https://maps.app.goo.gl/mVnw7c1xdwsSciSx5" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-pin"></i> Alberto Barton 527 - La Victoria - Perú</a></li>
         </ul>
       </div>
