@@ -26,9 +26,9 @@ $sURLSendMessageWhatsapp = "https://api.whatsapp.com/send?phone=" . $phone . "&t
 ?>
   <div class="container mt-5">
     <h2 class="text-center mb-4 pt-3 text-success"><i class="fa-solid fa-circle-check fa-3x text-green"></i></h2>
-    <h2 class="text-center mb-4">Nro. Pedido <?php echo $id; ?> creado</h2>
+    <h2 class="text-center mb-4">Nro. Pedido <?php echo $id; ?></h2>
     <a class="btn btn-outline-success btn-lg btn-block mb-4 shadow" style="width:100%" href="<?php echo $sURLSendMessageWhatsapp; ?>" target="_blank" rel="noopener noreferrer">Enviar whatsApp</a>
-    <a class="btn btn-secondary btn-lg btn-block mb-4 shadow" style="width:100%" href="../" rel="noopener noreferrer">Regresar</a>
+    <a class="btn btn-success btn-lg btn-block mb-4 shadow" style="width:100%" href="../" rel="noopener noreferrer">Cotizar nuevamente</a>
   </div>
 </main>
 <script>

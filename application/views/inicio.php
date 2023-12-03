@@ -9,7 +9,7 @@
         <div class="col-12 col-sm-12 col-md-12">
           <h2 class="text-left mb-3 fw-bold">Datos de Cliente</h2>
           <div class="card" style="border: none;">
-            <div class="card-body shadow p-3 bg-body rounded">
+            <div class="card-body shadow-sm p-3 bg-body rounded">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
                   <label class="fw-bold">Nombres y Apellidos <span class="label-advertencia text-danger"> *</span></label>
@@ -44,7 +44,7 @@
         <div class="col-12 col-sm-12 col-md-12">
           <h2 class="text-left mb-3 fw-bold">Datos de Empresa</h2>
           <div class="card" style="border: none;">
-            <div class="card-body shadow p-3 bg-body rounded">
+            <div class="card-body shadow-sm p-3 bg-body rounded">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
                   <label class="fw-bold">País <span class="label-advertencia text-danger"> *</span></label>
@@ -60,7 +60,7 @@
                 </div>
                 
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
-                  <label class="fw-bold">RUC</label> (opcional)
+                  <label class="fw-bold">RUC</label>
                   <div class="form-group">
                     <input type="text" inputmode="text" id="payment-numero_documento_identidad_empresa" name="Nu_Documento_Identidad" class="form-control input-number_letter" placeholder="Opcional" maxlength="16" autocomplete="on">
                     <span class="help-block text-danger" id="error"></span>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-12 mb-3">
-                  <label class="fw-bold">Empresa</label> (opcional)
+                  <label class="fw-bold">Empresa</label>
                   <div class="form-group">
                     <input type="text" inputmode="text" id="payment-nombre_empresa" name="No_Entidad" class="form-control" placeholder="Opcional" maxlength="100" autocomplete="on">
                     <span class="help-block text-danger" id="error"></span>
@@ -101,7 +101,7 @@
         <div class="row">
           <div class="col-12 col-sm-12">
             <div class="d-grid">
-              <button type="submit" id="btn-enviar_pedido" class="btn btn-primary col">Enviar pedido</button>
+              <button type="submit" id="btn-enviar_pedido" class="btn btn-success btn-lg col">Enviar pedido</button>
             </div>
           </div>
         </div>

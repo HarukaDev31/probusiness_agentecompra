@@ -2,8 +2,8 @@
   <footer class="pt-4 my-md-5 pt-md-5 pb-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <img class="mb-2" src="<?php echo base_url("assets/images/isotipo_probusiness.png?ver=1.0.0"); ?>" alt="" height="45">
-        <small class="d-block mb-3 text-body-secondary">© 2017–<?php echo date('Y'); ?></small>
+        <img class="mb-2" src="<?php echo base_url("assets/images/logo_probusiness.png?ver=5.0.0"); ?>" alt="" height="60">
+        <small class="d-block mb-3 text-body-secondary">© 2017 – <?php echo date('Y'); ?></small>
       </div>
       <div class="col-6 col-md">
         <h5 class="fw-bold mb-4">Empresa</h5>
