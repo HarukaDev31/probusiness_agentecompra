@@ -134,7 +134,7 @@ class InicioModel extends CI_Model{
                 'ID_Organizacion' => 1,
 				'ID_Pedido_Cabecera' => $iIdHeader,
                 'Txt_Producto' => $row['nombre_comercial'],
-                'Txt_Descripcion' => $row['caracteristicas'],
+                'Txt_Descripcion' => nl2br($row['caracteristicas']),
 				'Qt_Producto' => $row['cantidad'],
                 'Txt_Url_Imagen_Producto' => $Txt_Url_Imagen_Producto,
                 'Txt_Url_Link_Pagina_Producto' => $row['link'],
