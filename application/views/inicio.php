@@ -1,5 +1,5 @@
-<main><br><br>
-  <div class="container mt-5">
+<main>
+  <div class="container mt-4">
   <?php
   $attributes = array('id' => 'form-arrItems', 'enctype' => 'multipart/form-data');
   echo form_open('', $attributes);
@@ -83,7 +83,7 @@
   
     <!-- array_items -->
     <div>
-      <h2 class="text-center mt-3 fw-bold">Artículos</h2>
+      <h2 class="text-center mt-3 fw-bold">Productos</h2>
       <div id="div-arrItems">
       </div>
     </div>
@@ -91,7 +91,7 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 mt-2" id="div-button-add_item">
         <div class="d-grid gap">
-          <button type="button" id="btn-add_item" class="btn btn-danger btn-lg col">Agregar artículo</button>
+          <button type="button" id="btn-add_item" class="btn btn-danger btn-lg col">Agregar</button>
         </div>
       </div>
     </div>

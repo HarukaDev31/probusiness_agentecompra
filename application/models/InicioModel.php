@@ -112,7 +112,7 @@ class InicioModel extends CI_Model{
 
             $config['upload_path'] = $path;
             $config['allowed_types'] = 'png|jpg|jpeg|webp|PNG|JPG|JPEG|WEBP';
-            $config['max_size'] = 3096;//1024 KB = 1 MB
+            $config['max_size'] = 10240;//1024 KB = 1 MB
             $config['encrypt_name'] = TRUE;
             $config['max_filename'] = '255';
     
