@@ -69,6 +69,7 @@ class InicioModel extends CI_Model{
                 'No_Contacto' => $arrPost['name'],
                 'Nu_Celular_Contacto' => $arrPost['tel'],
                 'Txt_Email_Contacto' => $arrPost['email'],
+                'Nu_Agente_Compra' => 1
             );
 
             if ($this->db->insert('entidad', $arrCliente) > 0) {
