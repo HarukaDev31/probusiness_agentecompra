@@ -98,8 +98,11 @@ $(document).ready(function () {
       var sEstadoArticulos = true;
       $("#form-arrItems").find(':input').each(function () {
         var elemento = this;
-        
-        if ( $("#modal-nombre_comercial1").length > 0 ) {
+        console.log(' id > ' + elemento.id);
+        console.log('elemento > ');
+        console.log(elemento);
+
+        //if ( $("#modal-nombre_comercial1").length > 0 ) {
           if (elemento.classList[0]=='arrProducto'){
             if(elemento.type=='file'){
               if( document.getElementById(elemento.id).files.length == 0 ){
@@ -151,11 +154,13 @@ $(document).ready(function () {
               }
             }
           }
+          /*
         } else {
           alert('Agregar artículos');
           sEstadoArticulos = false;
           return false;
         }
+        */
       });
       //validacion de articulos
       
@@ -225,7 +230,7 @@ function addItems(){
               div_items += '<h6 class="card-title">';
                 div_items += '<span class="fw-bold">Nombre Comercial</span>';
               div_items += '</h6>';
-              div_items += '<input type="text" inputmode="text" id="modal-nombre_comercial' + iCounter + '" name="addProducto[' + iCounter + '][nombre_comercial]" class="arrProducto form-control" placeholder="" maxlength="255" autocomplete="off">';
+              div_items += '<input type="text" inputmode="text" data-id="' + iCounter + '" id="modal-nombre_comercial' + iCounter + '" name="addProducto[' + iCounter + '][nombre_comercial]" class="arrProducto form-control" placeholder="" maxlength="255" autocomplete="off">';
             div_items += '</div>';
             
             div_items += '<div class="col-sm-12 mb-3">';
@@ -233,7 +238,7 @@ function addItems(){
                 div_items += '<span class="fw-bold">Características</span>';
               div_items += '</h6>';
               div_items += '<div class="form-group">';
-                div_items += '<textarea class="arrProducto form-control required caracteristicas" placeholder="" id="modal-caracteristicas' + iCounter + '" name="addProducto[' + iCounter + '][caracteristicas]" style="height: 100px"></textarea>';
+                div_items += '<textarea class="arrProducto form-control required caracteristicas" placeholder="" data-id="' + iCounter + '" id="modal-caracteristicas' + iCounter + '" name="addProducto[' + iCounter + '][caracteristicas]" style="height: 100px"></textarea>';
                 div_items += '<span class="help-block text-danger" id="error"></span>';
               div_items += '</div>';
             div_items += '</div>';
@@ -243,7 +248,7 @@ function addItems(){
                 div_items += '<span class="fw-bold">Cantidad</span>';
               div_items += '</h6>';
               div_items += '<div class="form-group">';
-                div_items += '<input type="text" id="modal-cantidad' + iCounter + '" inputmode="decimal" name="addProducto[' + iCounter + '][cantidad]" class="arrProducto form-control cantidad input-decimal" placeholder="" value="" autocomplete="off">';
+                div_items += '<input type="text" id="modal-cantidad' + iCounter + '" inputmode="decimal" data-id="' + iCounter + '" name="addProducto[' + iCounter + '][cantidad]" class="arrProducto form-control cantidad input-decimal" placeholder="" value="" autocomplete="off">';
                 div_items += '<span class="help-block text-danger" id="error"></span>';
               div_items += '</div>';
             div_items += '</div>';
@@ -253,7 +258,7 @@ function addItems(){
                 div_items += '<span class="fw-bold">Link</span>';
               div_items += '</h6>';
               div_items += '<div class="form-group">';
-                div_items += '<input type="text" inputmode="url" id="modal-link' + iCounter + '" name="addProducto[' + iCounter + '][link]" class="arrProducto form-control link" placeholder="" autocomplete="off" autocapitalize="none">';
+                div_items += '<input type="text" inputmode="url" id="modal-link' + iCounter + '" data-id="' + iCounter + '" name="addProducto[' + iCounter + '][link]" class="arrProducto form-control link" placeholder="" autocomplete="off" autocapitalize="none">';
                 div_items += '<span class="help-block text-danger" id="error"></span>';
               div_items += '</div>';
             div_items += '</div>';

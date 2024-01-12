@@ -33,7 +33,6 @@ class InicioModel extends CI_Model{
     }
   
     public function enviarPedido($arrPost, $arrFiles){
-
 		$this->db->trans_begin();
 
         //crear cliente si no existe
@@ -104,6 +103,10 @@ class InicioModel extends CI_Model{
         $iCounter=0;
         $_FILES['tmp_voucher'] = $_FILES['voucher'];
 		foreach($arrPost['addProducto'] as $row) {
+		//foreach($arrPost['addProducto'] as $key => $row) {
+            //array_debug($key);
+            //array_debug($row);
+
             //SET IMAGEN
             $_FILES['voucher']['name'] = $_FILES['tmp_voucher']['name'][$iCounter];
             $_FILES['voucher']['type'] = $_FILES['tmp_voucher']['type'][$iCounter];
