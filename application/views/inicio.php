@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-12 col-sm-6 col-md-6">
         <div class="col-12 col-sm-12 col-md-12">
-          <h2 class="text-left mb-3 fw-bold">Datos de Cliente</h2>
+          <h2 class="text-left mb-3 fw-bold">Cliente</h2>
           <div class="card" style="border: none;">
             <div class="card-body shadow-sm p-3 bg-body rounded">
               <div class="row">
@@ -42,7 +42,7 @@
       
       <div class="col-12 col-sm-6 col-md-6 mt-3 mt-sm-0">
         <div class="col-12 col-sm-12 col-md-12">
-          <h2 class="text-left mb-3 fw-bold">Datos de Empresa</h2>
+          <h2 class="text-left mb-3 fw-bold">Empresa</h2>
           <div class="card" style="border: none;">
             <div class="card-body shadow-sm p-3 bg-body rounded">
               <div class="row">
