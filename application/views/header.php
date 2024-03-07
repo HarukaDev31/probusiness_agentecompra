@@ -3,8 +3,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="author" content="Geancarlos collazos">
+    <meta name="generator" content="">
     
     <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.ico?ver=6.0"); ?>">
     <link rel="apple-touch-icon-precomposed" sizes="192x192" href="<?php echo base_url("assets/images/favicon/android-chrome-512x512.png?ver=6.0"); ?>">
