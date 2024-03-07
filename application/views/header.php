@@ -6,14 +6,14 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
     
-    <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.ico?ver=5.0"); ?>">
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="<?php echo base_url("assets/images/favicon/android-chrome-512x512.png?ver=5.0"); ?>">
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="<?php echo base_url("assets/images/favicon/android-chrome-192x192.png?ver=5.0"); ?>">
-    <link rel="apple-touch-icon-precomposed" sizes="32x32" href="<?php echo base_url("assets/images/favicon/favicon-32x32.png?ver=5.0"); ?>">
-    <link rel="apple-touch-icon-precomposed" sizes="16x16" href="<?php echo base_url("assets/images/favicon/favicon-16x16.png?ver=5.0"); ?>">
-    <link rel="apple-touch-icon-precomposed" sizes="16x16" href="<?php echo base_url("assets/images/favicon/apple-touch-icon.png?ver=5.0"); ?>">
-    <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.png?ver=5.0.0"); ?>" type="image/png">
-	  <link rel="icon" href="<?php echo base_url("assets/images/favicon/favicon.png?ver=5.0.0"); ?>" type="image/png">
+    <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.ico?ver=6.0"); ?>">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="<?php echo base_url("assets/images/favicon/android-chrome-512x512.png?ver=6.0"); ?>">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="<?php echo base_url("assets/images/favicon/android-chrome-192x192.png?ver=6.0"); ?>">
+    <link rel="apple-touch-icon-precomposed" sizes="32x32" href="<?php echo base_url("assets/images/favicon/favicon-32x32.png?ver=6.0"); ?>">
+    <link rel="apple-touch-icon-precomposed" sizes="16x16" href="<?php echo base_url("assets/images/favicon/favicon-16x16.png?ver=6.0"); ?>">
+    <link rel="apple-touch-icon-precomposed" sizes="16x16" href="<?php echo base_url("assets/images/favicon/apple-touch-icon.png?ver=6.0"); ?>">
+    <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon/favicon.png?ver=6.0.0"); ?>" type="image/png">
+	  <link rel="icon" href="<?php echo base_url("assets/images/favicon/favicon.png?ver=6.0.0"); ?>" type="image/png">
     
     <title>ProBusiness | Agente de Compra</title>
 
