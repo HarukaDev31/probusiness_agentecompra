@@ -49,7 +49,7 @@ class InicioModel extends CI_Model{
         //     $sNombreEntidad = $arrPost['name'];
         // }
 
-        $query = "SELECT ID_Entidad FROM entidad WHERE ID_Empresa = 1 AND Nu_Tipo_Entidad = 0 AND ID_Tipo_Documento_Identidad = " . $iTipoDocumentoIdentidad . " AND Nu_Documento_Identidad = '" . $sNumeroDocumentoIdentidad . "' AND No_Entidad = '" . limpiarCaracteresEspeciales($sNombreEntidad) . "' LIMIT 1";
+        $query = "SELECT ID_Entidad FROM entidad WHERE ID_Empresa = 1 AND Nu_Tipo_Entidad = 0 AND ID_Tipo_Documento_Identidad = " . $iTipoDocumentoIdentidad . " AND Nu_Documento_Identidad = '" . $sNumeroDocumentoIdentidad . "' AND Nu_Documento_Identidad IS NOT NULL  AND Nu_Documento_Identidad!='' AND No_Entidad = '" . limpiarCaracteresEspeciales($sNombreEntidad) . "' LIMIT 1";
         $objVerificarCliente = $this->db->query($query)->row();
         if (is_object($objVerificarCliente)){
             $ID_Entidad = $objVerificarCliente->ID_Entidad;
