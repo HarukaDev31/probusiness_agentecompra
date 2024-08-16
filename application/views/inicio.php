@@ -1,7 +1,5 @@
 <main>
-  <?php
-  echo phpinfo();
-  ?>
+  
   <div class="container mt-4">
   <?php
   $attributes = array('id' => 'form-arrItems', 'enctype' => 'multipart/form-data');
