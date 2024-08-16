@@ -197,7 +197,7 @@ $(document).ready(function () {
           if(response.status=='success'){
             //alert(response.message);
 
-            // window.location = base_url + "Inicio/thank/" + response.result.id;
+            window.location = base_url + "Inicio/thank/" + response.result.id;
           } else {
             alert(response.message);
           }
