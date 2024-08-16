@@ -35,9 +35,18 @@ class Inicio extends CI_Controller {
 	}
 
 	public function enviarPedido(){
-		$arrPost = $this->input->post();
-		$arrFiles = $_FILES;
-		echo json_encode($this->InicioModel->enviarPedido($arrPost, $arrFiles));
+		try{
+			$arrPost = $this->input->post();
+			$arrFiles = $_FILES;
+			echo json_encode($this->InicioModel->enviarPedido($arrPost, $arrFiles));
+		}
+		catch(Exception $e){
+			echo json_encode(array(
+				'status' => 'danger',
+				'message' => 'Error al enviar pedido',
+				'error' => $e->getMessage(),
+			));
+		}
 	}
 
 	public function thank($id=0){

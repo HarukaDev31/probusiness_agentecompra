@@ -1,4 +1,5 @@
 var div_items = '', iCounter = 1;
+let maxContentSize = 1024 * 1024 * 200; // 2MB
 $(document).ready(function () {
   $("#cbo-pais").select2({
     placeholder: '- Elegir -',
@@ -68,6 +69,7 @@ $(document).ready(function () {
   })
 
   $("#form-arrItems").on('submit',function(e){
+    
     e.preventDefault();
 
     $('.help-block').empty();
@@ -118,7 +120,7 @@ $(document).ready(function () {
             if(elemento.type=='textarea' || elemento.type=='text'){
               if (elemento.classList[2]=='required'){
                 if(elemento.classList[3]=='caracteristicas'){
-                  if ($('#' + elemento.id).val().trim().length < 10) {
+                  if ($('#' + elemento.id).val().trim().length < 5) {
                     $('#' + elemento.id).closest('.form-group').find('.help-block').html('Ingresar características');
                     $('#' + elemento.id).closest('.form-group').removeClass('has-success').addClass('has-error');
         
@@ -165,11 +167,20 @@ $(document).ready(function () {
       //validacion de articulos
       
       if(sEstadoArticulos==true) {
-        $('#btn-enviar_pedido').prop('disabled', true);
-        $('#btn-enviar_pedido').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando');
+   
 
         var postData = new FormData($("#form-arrItems")[0]);
-        console.log(postData);
+        //check if post data size is less than maxContentSize
+        if (getFormDataSize(postData) > maxContentSize) {
+          //show sweet alert error
+          alert('El tamaño de los archivos no debe superar los ' + (maxContentSize/1024/1024) + 'MB'+
+          'Intente enviarlo en pedidos separados'
+        );
+
+          return false;
+        }
+        $('#btn-enviar_pedido').prop('disabled', true);
+        $('#btn-enviar_pedido').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando');
         $.ajax({
           url: base_url + 'Inicio/enviarPedido',
           type: "POST",
@@ -186,7 +197,7 @@ $(document).ready(function () {
           if(response.status=='success'){
             //alert(response.message);
 
-            window.location = base_url + "Inicio/thank/" + response.result.id;
+            // window.location = base_url + "Inicio/thank/" + response.result.id;
           } else {
             alert(response.message);
           }
@@ -369,3 +380,20 @@ function iOS() {
   // iPad on iOS 13 detection
   || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 }
+function getFormDataSize(formData) {
+ let totalSize = 0;
+
+  // Iterar sobre todos los pares clave/valor en el FormData
+  for (let pair of formData.entries()) {
+      // Si el valor es un archivo, obtener su tamaño
+      if (pair[1] instanceof File) {
+          totalSize += pair[1].size;
+      } else {
+          // De lo contrario, contar la longitud del valor como cadena
+          totalSize += new Blob([pair[1]]).size;
+      }
+  }
+
+  return totalSize;
+}
+
