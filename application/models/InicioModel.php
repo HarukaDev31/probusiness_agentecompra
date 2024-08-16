@@ -122,7 +122,7 @@ class InicioModel extends CI_Model
 
             $config['upload_path'] = $path;
             $config['allowed_types'] = 'png|jpg|jpeg|webp|image/webp|PNG|JPG|JPEG|WEBP';
-            $config['max_size'] = 10240; //1024 KB = 1 MB
+            $config['max_size'] = 10240*200; //1024 KB = 1 MB
             $config['encrypt_name'] = true;
             $config['max_filename'] = '255';
             try {
@@ -134,7 +134,7 @@ class InicioModel extends CI_Model
                     //     'status' => 'error',
                     //     'message' => 'No se cargo imagen ' . $row['nombre_comercial'] . ' ' . strip_tags($this->upload->display_errors()),
                     // );
-                    echo 'No se cargo imagen ' . $row['nombre_comercial'] . ' ' . strip_tags($this->upload->display_errors());  
+                    return 'No se cargo imagen ' . $row['nombre_comercial'] . ' ' . strip_tags($this->upload->display_errors());  
                 } else {
                     $arrUploadFile = $this->upload->data();
                     $Txt_Url_Imagen_Producto = base_url($path . $arrUploadFile['file_name']);
